@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>MNiem</title>
+	<meta name="description" content="Na tej stronie nic nie ma!" />
+	<meta name="keywords" content="pustka" />
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="ico.ico">
+	<script type="text/javascript">
+		function odliczanie()
+		{
+			var dzisiaj = new Date();
+			var dzien = dzisiaj.getDate();
+			var miesiac = dzisiaj.getMonth()+1;
+			var rok = dzisiaj.getFullYear();
+			var godzina = dzisiaj.getHours();
+			if (godzina<10) godzina = "0"+godzina;
+			var minuta = dzisiaj.getMinutes();
+			if (minuta<10) minuta = "0"+minuta;
+			var sekunda = dzisiaj.getSeconds();
+			if (sekunda<10) sekunda = "0"+sekunda;
+			document.getElementById("data").innerHTML = dzien+"-"+miesiac+"-"+rok;
+			document.getElementById("zegar").innerHTML = godzina+":"+minuta+":"+sekunda;
+			 setTimeout("odliczanie()",1000);
+		}
+	</script>
+</head>
+<body  onload="odliczanie();" style="background-color: #3e3e3e; text-align: center; font-family: 'Lato', sans-serif; height: 100%; border">
+	<br>
+	<h2><div id="data" style="color: #ff0000;"></div></h2>
+	<h2><div id="zegar" style="color: #00ff00;"></div></h2>
+	<img src="ico.ico"></img>
+	<br>
+	<div style="color: #ffffff;">
+		<h1>Maciej</h1>
+		<br><br><br>
+		<a href="ptaki/index.html">Strona z ptakami</a><br>
+		<a href="doswiadczenie/index.html">Strona z doświadczeniem</a><br>
+		<a href="herby/herby.html">Herby</a><br>
+		<a href="odsylacze/odsylacze.html>Kotwice</a>
+	</div>
+</body>
+</html>
